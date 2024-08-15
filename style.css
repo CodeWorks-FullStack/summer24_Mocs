@@ -1,0 +1,75 @@
+:root {
+  --magic-card-distance: -14vh;
+}
+
+body {
+  /* color: red; */
+}
+
+.hero-croc-image {
+  background-image: url(imgs/mocsHero.png);
+  /* background-color: red; */
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.magic-containment {
+  position: relative;
+  padding: 0;
+}
+
+.magic-card {
+  /* position: absolute; */
+  /* top: -100px; */
+  /* bottom: -14vh; */
+  bottom: var(--magic-card-distance);
+  background-color: rgba(252, 252, 252, 0.462);
+  color: var(--bs-dark);
+  /* left: 100px; */
+}
+
+.magic-card-offset {
+  --magic-card-distance: 0;
+  /* margin-top: 14vh; */
+  margin-top: calc(-1 * var(--magic-card-distance));
+}
+
+.shop-filter-btn:hover {
+  border-bottom: 2px solid var(--bs-primary);
+}
+
+.card img {
+  background: linear-gradient(52deg, rgba(148, 86, 236, 1) 0%, rgba(97, 150, 187, 1) 46%, rgba(37, 241, 129, 1) 100%);
+  height: 8rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* NOTE min-width specifies, you must be at least 576px OR greater, for this rule to apply */
+/* REVIEW sm media rule */
+@media screen and (min-width: 576px) {
+
+  body {
+    /* background-color: red; */
+  }
+
+  .card img {
+    height: 14rem;
+  }
+
+  .magic-card {
+    position: absolute;
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+  }
+
+  .magic-card-offset {
+    /* margin-top: 14vh; */
+    --magic-card-distance: -14vh
+  }
+
+}
+
+/* attribute selector */
+[title*="cool"] {}
